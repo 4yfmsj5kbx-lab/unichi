@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNICHI膠原蛋白小熊軟糖 - 澳洲正品代購</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif; }
+        body { background-color: #fff9fb; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        header { background: linear-gradient(to right, #ff6b8b, #ff8e9e); color: white; padding: 20px 0; text-align: center; }
+        .header-content { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 10px; font-size: 24px; font-weight: bold; }
+        .cart-icon-wrapper { position: relative; cursor: pointer; font-size: 24px; }
+        .cart-count { position: absolute; top: -8px; right: -8px; background: #4ecdc4; color: white; border-radius: 50%; width: 20px; height: 20px; font-size: 12px; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        .product-card { background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 30px 0; display: flex; flex-wrap: wrap; }
+        .product-image { flex: 1; min-width: 300px; background: linear-gradient(135deg, #ffe8ec, #fff0f3); display: flex; align-items: center; justify-content: center; padding: 40px; }
+        .product-emoji { font-size: 150px; color: #ff6b8b; }
+        .product-info { flex: 1; min-width: 300px; padding: 40px; }
+        .product-badge { display: inline-block; background: #4ecdc4; color: white; padding: 8px 20px; border-radius: 20px; font-size: 14px; font-weight: 600; margin-bottom: 20px; }
+        .product-title { color: #ff6b8b; font-size: 32px; font-weight: bold; margin-bottom: 10px; }
+        .product-subtitle { color: #666; font-size: 18px; margin-bottom: 25px; }
+        .price { font-size: 42px; color: #ff6b8b; font-weight: bold; margin: 25px 0; }
+        .price span { font-size: 22px; color: #999; text-decoration: line-through; margin-left: 10px; }
+        .features { display: flex; flex-wrap: wrap; gap: 12px; margin: 25px 0; }
+        .feature { background: #f8f9fa; padding: 12px 20px; border-radius: 10px; font-size: 14px; }
+        .quantity-control { display: flex; align-items: center; margin: 25px 0; background: #f8f9fa; border-radius: 12px; padding: 5px; width: fit-content; }
+        .qty-btn { width: 50px; height: 50px; border: none; background: white; font-size: 24px; cursor: pointer; border-radius: 10px; }
+        #quantity { width: 70px; height: 50px; text-align: center; border: none; background: transparent; font-size: 22px; font-weight: bold; }
+        .btn { min-width: 200px; height: 60px; border: none; border-radius: 12px; font-size: 18px; font-weight: 600; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; margin: 10px; }
+        .btn-primary { background: #ff6b8b; color: white; }
+        .btn-secondary { background: #4ecdc4; color: white; }
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center; padding: 20px; }
+        .modal-content { background: white; padding: 40px; border-radius: 20px; max-width: 500px; width: 90%; text-align: center; }
+        .contact-box { background: #f8f9fa; padding: 25px; border-radius: 15px; margin: 20px 0; }
+        .contact-id { font-size: 28px; color: #ff6b8b; font-weight: bold; margin: 15px 0; }
+        .notification { position: fixed; top: 30px; right: 30px; background: #4ecdc4; color: white; padding: 18px 30px; border-radius: 12px; z-index: 2000; font-weight: 600; display: none; }
+        @media (max-width: 768px) { .product-card { flex-direction: column; } .btn { width: 100%; } }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; font-size: 20px;">🦘</div>
+                <span>Zoey台灣人澳洲購Tone直郵</span>
+            </div>
+            <div class="cart-icon-wrapper" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="product-card">
+            <div class="product-image">
+                <div class="product-emoji">🧸</div>
+            </div>
+            <div class="product-info">
+                <div class="product-badge">澳洲正品直郵</div>
+                <h1 class="product-title">UNICHI 膠原蛋白小熊軟糖</h1>
+                <p class="product-subtitle">玫瑰果精華+維生素C，美味又美容，每瓶60粒</p>
+                <div class="price">¥160.00 <span>¥258.00</span></div>
+                <div class="features">
+                    <div class="feature">澳洲藥房正品</div>
+                    <div class="feature">直郵包郵包稅</div>
+                    <div class="feature">天然成分</div>
+                    <div class="feature">改善肌膚</div>
+                </div>
+                <div style="margin: 25px 0;">
+                    <div style="margin-bottom: 15px; font-weight: 600;">購買數量：</div>
+                    <div class="quantity-control">
+                        <button class="qty-btn" onclick="changeQuantity(-1)">-</button>
+                        <input type="number" id="quantity" value="1" min="1" readonly>
+                        <button class="qty-btn" onclick="changeQuantity(1)">+</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-primary" onclick="addToCart()">
+                        <i class="fas fa-cart-plus"></i> 加入購物車
+                    </button>
+                    <button class="btn btn-secondary" onclick="buyNow()">
+                        <i class="fas fa-bolt"></i> 立即購買
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <div style="font-size: 60px; color: #4ecdc4; margin-bottom: 20px;">
+                <i class="fas fa-comment-dots"></i>
+            </div>
+            <h2>聯繫客服購買</h2>
+            <p>請添加以下聯繫方式，客服將為您處理訂單</p>
+            <div class="contact-box">
+                <h3>微信（中國用戶）</h3>
+                <div class="contact-id">tonexie1984</div>
+                <p>添加時請備註"UNICHI小熊軟糖"</p>
+            </div>
+            <div class="contact-box">
+                <h3>LINE（台灣用戶）</h3>
+                <div class="contact-id">tonexie1984</div>
+                <p>添加後發送"UNICHI"開始諮詢</p>
+            </div>
+            <button class="btn btn-secondary" onclick="closeModal()" style="width: 100%; margin-top: 20px;">
+                關閉窗口
+            </button>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script>
+        let cart = [];
+        let quantity = 1;
+        
+        function changeQuantity(change) {
+            quantity += change;
+            if (quantity < 1) quantity = 1;
+            document.getElementById('quantity').value = quantity;
+        }
+        
+        function addToCart() {
+            cart.push({ quantity: quantity });
+            document.getElementById('cart-count').textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            showNotification('已添加 ' + quantity + ' 瓶到購物車');
+        }
+        
+        function buyNow() {
+            addToCart();
+            document.getElementById('contactModal').style.display = 'flex';
+        }
+        
+        function toggleCart() {
+            document.getElementById('contactModal').style.display = 'flex';
+        }
+        
+        function closeModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+        
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('contactModal')) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
